@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<Configuration>
+  <DRIVE_PATH>C:\AUTOMATION\DLLs</DRIVE_PATH>
+  <DEFAULT_TIMEOUT>120</DEFAULT_TIMEOUT>
+  <HTML_DIR>C:\BUILD_AUTOMATION</HTML_DIR>
+  <SCREENSHOT_DIR>C:\BUILD_AUTOMATION\images\</SCREENSHOT_DIR>
+  <SUPPORT_DIR>C:\BUILD_AUTOMATION\FO_Automation\Support\</SUPPORT_DIR>
+  <DOWNLOAD_DIR>AutomationSupportingDocs\DownloadVerification\</DOWNLOAD_DIR>
+  <LANEPRICING_DIR>AutomationSupportingDocs\LanePricing\</LANEPRICING_DIR>
+  <CARRIERINSURANCE_DIR>AutomationSupportingDocs\CarrierInsurance\</CARRIERINSURANCE_DIR>
+  <!-- Ones that can change based on run time  -->
+  <BROWSER>Chrome</BROWSER>
+  <REUSE_BROWSER>true</REUSE_BROWSER>
+  <USE_EXTENTX>true</USE_EXTENTX>
+  <LOCALE>NA</LOCALE>
+  <APPLICATION>DMSPortal</APPLICATION>
+  <!-- <LOCALE>EU</LOCALE> -->
+  <ENV>QA</ENV>
+  <!-- <ENV>UAT</ENV> -->
+  <!-- <ENV>MAIN</ENV> -->
+  <!-- <ENV>DEV</ENV> -->
+</Configuration>

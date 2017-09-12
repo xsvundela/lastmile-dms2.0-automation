@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44AAB09C-655D-49FE-825F-324523C6642E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LM_DMS2._0_UI_Automation</RootNamespace>
+    <AssemblyName>LM_DMS2.0_UI_Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DataVisualization.Design" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transport.Automation.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Transport.Automation.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.WebDriver.3.5.1\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.Support.3.5.1\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xpo.Common.Configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\Xpo.Common.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.reporters.net452, Version=2.2.0.3545, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\xunit.runner.reporters.net452.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.runner.utility.net35, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\xunit.runner.utility.net35.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BRBaseObjects\BRApiBaseTest.cs" />
+    <Compile Include="BRBaseObjects\BRAPIFixture.cs" />
+    <Compile Include="BRBaseObjects\BRBaseData.cs" />
+    <Compile Include="BRBaseObjects\BRBasePage.cs" />
+    <Compile Include="BRBaseObjects\BRBaseUITest.cs" />
+    <Compile Include="BRBaseObjects\BRBaseWidget.cs" />
+    <Compile Include="BRBaseObjects\BROpenXMLHelper.cs" />
+    <Compile Include="BRBaseObjects\BRUIFixture.cs" />
+    <Compile Include="BRBaseObjects\ExcelDataAttribute .cs" />
+    <Compile Include="BRBaseObjects\XPOBaseWidget.cs" />
+    <Compile Include="BRBaseObjects\XPOBrowser.cs" />
+    <Compile Include="BRControls\BRButton.cs" />
+    <Compile Include="BRControls\BRCard.cs" />
+    <Compile Include="BRControls\BRCheckbox.cs" />
+    <Compile Include="BRControls\BRDatePicker.cs" />
+    <Compile Include="BRControls\BRDropDownList.cs" />
+    <Compile Include="BRControls\BRFieldSet.cs" />
+    <Compile Include="BRControls\BRFilter.cs" />
+    <Compile Include="BRControls\BRGrid.cs" />
+    <Compile Include="BRControls\BRImage.cs" />
+    <Compile Include="BRControls\BRLink.cs" />
+    <Compile Include="BRControls\BRMenu.cs" />
+    <Compile Include="BRControls\BRPagination.cs" />
+    <Compile Include="BRControls\BRRadioButton.cs" />
+    <Compile Include="BRControls\BRSelect.cs" />
+    <Compile Include="BRControls\BRTab.cs" />
+    <Compile Include="BRControls\BRTable.cs" />
+    <Compile Include="BRControls\BRTabularData.cs" />
+    <Compile Include="BRControls\BRTextBox.cs" />
+    <Compile Include="BRControls\BRToggleButton.cs" />
+    <Compile Include="BRDataTypes\BRBaseXmlManager.cs" />
+    <Compile Include="BRDataTypes\BRConfiguration.cs" />
+    <Compile Include="BRDataTypes\BRGlobalVars.cs" />
+    <Compile Include="BRDataTypes\BRPermaSession.cs" />
+    <Compile Include="BRUtilities\CurrentEnvironment.cs" />
+    <Compile Include="BRUtilities\CustomTestCaseOrderer.cs" />
+    <Compile Include="BRUtilities\CustomTestCollectionOrderer.cs" />
+    <Compile Include="LMDMSPortal\LMBaseObjects\LMBaseData.cs" />
+    <Compile Include="LMDMSPortal\LMBaseObjects\LMBasePage.cs" />
+    <Compile Include="LMDMSPortal\LMBaseObjects\LMBaseUITest.cs" />
+    <Compile Include="LMDMSPortal\LMDataObjects\LMLoginPageData.cs" />
+    <Compile Include="LMDMSPortal\LMDataTypes\LMConfiguration.cs" />
+    <Compile Include="LMDMSPortal\LMPageObjects\LMLoginPage.cs" />
+    <Compile Include="LMDMSPortal\LMResources\LMConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMConfig.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LMDMSPortal\LMTests\Login.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.xml" />
+    <Content Include="ExternalReferences\DocumentFormat.OpenXml.dll" />
+    <Content Include="ExternalReferences\extent-config.xml" />
+    <Content Include="ExternalReferences\ExtentReports.dll" />
+    <Content Include="ExternalReferences\Microsoft.SqlServer.Types.dll" />
+    <Content Include="ExternalReferences\Newtonsoft.Json.dll" />
+    <Content Include="ExternalReferences\Transport.Automation.Platform.dll" />
+    <Content Include="ExternalReferences\Transport.Automation.Platform.pdb" />
+    <Content Include="ExternalReferences\WebDriver.dll" />
+    <Content Include="ExternalReferences\WebDriver.Support.dll" />
+    <Content Include="ExternalReferences\Xpo.Common.Configuration.dll" />
+    <Content Include="ExternalReferences\Xpo.Common.Exceptions.dll" />
+    <Content Include="ExternalReferences\Xpo.Common.XpoApiClient.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Api.Client.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Api.Data.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Api.Models.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.DataGenerators.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Fakers.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Shared.Data.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Shared.DataContracts.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Shared.DataModel.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.Shared.Lookups.dll" />
+    <Content Include="ExternalReferences\Xpo.PartnerMaster.XunitHelpers.dll" />
+    <Content Include="ExternalReferences\Xpo.Rack.Job.Server.dll" />
+    <Content Include="ExternalReferences\Xpo.Rack.Job.Server.Hangfire.dll" />
+    <Content Include="ExternalReferences\Xpo.Track.ApiClient.dll" />
+    <Content Include="ExternalReferences\Xpo.Track.Shared.Models.dll" />
+    <Content Include="ExternalReferences\Xpo.Track.Tms.dll" />
+    <Content Include="ExternalReferences\Xpo.Wood.ApiClient.dll" />
+    <Content Include="ExternalReferences\Xpo.Wood.Shared.Models.dll" />
+    <Content Include="ExternalReferences\xunit.abstractions.dll" />
+    <Content Include="ExternalReferences\xunit.assert.dll" />
+    <Content Include="ExternalReferences\xunit.core.dll" />
+    <Content Include="ExternalReferences\xunit.execution.desktop.dll" />
+    <Content Include="ExternalReferences\xunit.runner.reporters.net452.dll" />
+    <Content Include="ExternalReferences\xunit.runner.utility.net35.dll" />
+    <Content Include="LMDMSPortal\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LMDMSPortal\LMResources\LMConfig.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LMConfig.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
