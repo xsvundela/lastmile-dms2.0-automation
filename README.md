@@ -9,6 +9,13 @@ What we have done to setup/Resuse the existing framework?
 -	Have included reusable packages as well as packages including files to be edited with respect to our needs , of Brokerage-web-automation solution(used by Brokerage, Freight Optimizer, Carrier Portal, Customer Portal etc. ) in our new solution.
 -	Have created a sample test script for Login action scenario of DMS 1.0 Login page and script executed.
 
+Software needs to be installed -
+ Please install Visual Studio 2015 or latest version. Please make sure below dotnet packages also installed.
+1. Install dotNetCore.1.1
+2. Install DotNetCore.1.0.0.RC2-WindowsHosting
+3. Install DotNetCore.1.0.1-VS2015Tools.Preview2.0.3
+
+
 Basic steps to be done for script execution?
 
 1) we have to clone/Download the existing source code from the Lastmil-dns2.0-automation repository to our local machine
