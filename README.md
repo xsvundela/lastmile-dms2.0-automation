@@ -15,6 +15,10 @@ Software needs to be installed -
 2. Install DotNetCore.1.0.0.RC2-WindowsHosting
 3. Install DotNetCore.1.0.1-VS2015Tools.Preview2.0.3
 
+Data setup to be done:
+
+1) Please download folders BUILD_AUTOMATION and AUTOMATION from below Git Repository and directly paste into C drive.
+https://github.com/xpologistics/lastmile-dms2.0-testdata.git
 
 Basic steps to be done for script execution?
 
@@ -24,9 +28,7 @@ Basic steps to be done for script execution?
 4) Go to LMDMSPortal --> LMTests --> inside we have a class file with Login.cs
 5) Open Login.cs file and right click on the [Fact] and select runtests.
 
-Data setup to be done:
 
-1) Please download the build_automation folder from the Git Repository and Paste it in the C the Folder with same Naming conversion.
 
 
 
