@@ -2,7 +2,7 @@
 
 namespace LastMile.Web.Automation.BRDataTypes
 {
-    class CARConfiguration : BRConfiguration 
+    class LMConfiguration : BRConfiguration 
     {
         #region MemberVars
         private static int m_timeOut = -1;
@@ -179,7 +179,7 @@ namespace LastMile.Web.Automation.BRDataTypes
 
         #region Constructors
         /// <summary>
-        public CARConfiguration() : base()
+        public LMConfiguration() : base()
         {
             BRConfiguration config = new BRConfiguration();
             config.ApplicationName = "";

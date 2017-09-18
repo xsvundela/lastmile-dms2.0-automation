@@ -107,7 +107,8 @@ namespace LastMile.Web.Automation.BRBaseObjects
 
         public static void Close()
         {
-            //Browser.Close();
+            Browser.Close();
+            Browser.Quit();
         }
 
         public static void Refresh()

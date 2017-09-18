@@ -4,6 +4,8 @@ using Xunit;
 using LastMile.Web.Automation.LMDMSPortal.LMBaseObjects;
 using LastMile.Web.Automation.LMDMSPortal.LMDataObjects;
 
+
+
 namespace LastMile.Web.Automation.LMDMSPortal.LMTests
 {
 
@@ -27,6 +29,8 @@ namespace LastMile.Web.Automation.LMDMSPortal.LMTests
             LMLoginPage LMbase = new LMLoginPage();
             LMbase.LoginAs(m_BasePageData.retrieveTestData("UserName"), m_BasePageData.retrieveTestData("Password"));
 
+            BRBaseObjects.XPOBrowser.Close();
+            
         }
 
         // Verify Cancelling add a new role.
