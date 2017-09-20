@@ -53,11 +53,20 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExternalReferences\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\..\..\..\..\Api_Aut\brokerage-web-automation\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DataVisualization.Design" />
@@ -88,6 +97,10 @@
     <Reference Include="Xpo.Common.Configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Brokerage\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\Xpo.Common.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpo.Common.XpoApiClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\Xpo.Common.XpoApiClient.dll</HintPath>
     </Reference>
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -152,6 +165,21 @@
     <Compile Include="BRUtilities\CurrentEnvironment.cs" />
     <Compile Include="BRUtilities\CustomTestCaseOrderer.cs" />
     <Compile Include="BRUtilities\CustomTestCollectionOrderer.cs" />
+    <Compile Include="LMAPI\Common\DBUtilities.cs" />
+    <Compile Include="LMAPI\Common\LMApiClient.cs" />
+    <Compile Include="LMAPI\Common\LogHandler.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\Client\ApiBaseTest.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\CIOrderEvents.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\CIOrderSegment.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\ConsigneeInfo.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\Events.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\OrderDeliveryInfo.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\Products.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\Segment.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\SegmentLineItem.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\Services.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\ShipperInfo.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\TrackingInformation.cs" />
     <Compile Include="LMDMSPortal\LMBaseObjects\LMBaseData.cs" />
     <Compile Include="LMDMSPortal\LMBaseObjects\LMBasePage.cs" />
     <Compile Include="LMDMSPortal\LMBaseObjects\LMBaseUITest.cs" />
@@ -166,6 +194,8 @@
     <Compile Include="LMDMSPortal\LMTests\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\Client\ExtendedLMApiClient.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\APITests\TestScripts.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -233,6 +263,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>LMConfig.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestApi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
