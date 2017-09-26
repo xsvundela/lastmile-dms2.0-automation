@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.ViewModel
 {
-   public  class TrackingInformation
+   public  class TrackingInformationAPIResponse
     {
         public long OrderId { get; set; }
         public string TrackingNumber { get; set; }

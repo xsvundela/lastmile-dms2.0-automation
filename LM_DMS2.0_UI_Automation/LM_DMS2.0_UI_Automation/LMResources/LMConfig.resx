@@ -120,43 +120,22 @@
   <data name="Application" xml:space="preserve">
     <value>DMSPortal</value>
   </data>
-  <data name="DEFAULT_NICE_USERNAME_EU" xml:space="preserve">
-    <value>Euro Mation</value>
+  <data name="INT_SERVER_URL_BASE" xml:space="preserve">
+    <value>https://int-xlmapi.xpo.com/</value>
   </data>
-  <data name="DEFAULT_NICE_USERNAME_NA" xml:space="preserve">
-    <value>Otto Mation</value>
-  </data>
-  <data name="DEFAULT_PASS_EU" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="DEFAULT_PASS_NA" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="DEFAULT_USER_EU" xml:space="preserve">
-    <value>eumation</value>
-  </data>
-  <data name="DEFAULT_USER_NA" xml:space="preserve">
-    <value>omutation</value>
-  </data>
-  <data name="EXTENT_SERVER" xml:space="preserve">
-    <value>foqawebprd01.xpo.pvt</value>
-  </data>
-  <data name="PROJECT_NAME_EU" xml:space="preserve">
-    <value>Freight Optimizer - Europe -</value>
-  </data>
-  <data name="PROJECT_NAME_NA" xml:space="preserve">
-    <value>Freight Optimizer -</value>
-  </data>
-  <data name="SERVER_ADDRESS_DEV" xml:space="preserve">
-    <value>http://xeadev.xpo.com/MP-Carrier-Portal</value>
-  </data>
-  <data name="SERVER_ADDRESS_MAIN" xml:space="preserve">
-    <value>http://xpodevapp1.xpologistics.com/Xpo.FreightOptimizer.Web.Main</value>
-  </data>
-  <data name="SERVER_ADDRESS_QA" xml:space="preserve">
+  <data name="SERVER_ADDRESS_INT" xml:space="preserve">
     <value>https://int-desktop.xpolastmile.com/portal</value>
+  </data>
+  <data name="SERVER_ADDRESS_STA" xml:space="preserve">
+    <value>https://sta-desktop.xpolastmile.com/portal</value>
   </data>
   <data name="SERVER_ADDRESS_UAT" xml:space="preserve">
     <value>http://uat.xpologistics.com/Xpo.FreightOptimizer.Uat</value>
+  </data>
+  <data name="SERVER_URL_WITH_PACKAGE" xml:space="preserve">
+    <value>CTCoreAPI/api/v1/</value>
+  </data>
+  <data name="STA_SERVER_URL_BASE" xml:space="preserve">
+    <value>https://sta-xlmapi.xpo.com/</value>
   </data>
 </root>

@@ -165,10 +165,10 @@
     <Compile Include="BRUtilities\CurrentEnvironment.cs" />
     <Compile Include="BRUtilities\CustomTestCaseOrderer.cs" />
     <Compile Include="BRUtilities\CustomTestCollectionOrderer.cs" />
-    <Compile Include="LMAPI\Common\DBUtilities.cs" />
     <Compile Include="LMAPI\Common\LMApiClient.cs" />
     <Compile Include="LMAPI\Common\LogHandler.cs" />
-    <Compile Include="LMAPI\ConsumerTrackingAPI\Client\ApiBaseTest.cs" />
+    <Compile Include="LMAPI\Common\ServerStatus.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\APITests\GetOrderTrackingWithOrderId.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\CIOrderEvents.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\CIOrderSegment.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\ConsigneeInfo.cs" />
@@ -180,25 +180,24 @@
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\Services.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\ShipperInfo.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\TrackingInformation.cs" />
-    <Compile Include="LMDMSPortal\LMBaseObjects\LMBaseData.cs" />
-    <Compile Include="LMDMSPortal\LMBaseObjects\LMBasePage.cs" />
-    <Compile Include="LMDMSPortal\LMBaseObjects\LMBaseUITest.cs" />
-    <Compile Include="LMDMSPortal\LMDataObjects\LMLoginPageData.cs" />
-    <Compile Include="LMDMSPortal\LMDataTypes\LMConfiguration.cs" />
-    <Compile Include="LMDMSPortal\LMPageObjects\LMLoginPage.cs" />
-    <Compile Include="LMDMSPortal\LMResources\LMConfig.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LMConfig.resx</DependentUpon>
-    </Compile>
-    <Compile Include="LMDMSPortal\LMTests\Login.cs" />
+    <Compile Include="LMDBFactory\DBFactory.cs" />
+    <Compile Include="LMDBFactory\DMS1DbQueryFactory.cs" />
+    <Compile Include="LMDBFactory\DMS2DbQueryFactory.cs" />
+    <Compile Include="LMResources\LMConfig.Designer.cs" />
+    <Compile Include="LMUIPortal\LMBaseObjects\LMBaseData.cs" />
+    <Compile Include="LMUIPortal\LMBaseObjects\LMBasePage.cs" />
+    <Compile Include="LMUIPortal\LMBaseObjects\LMBaseUITest.cs" />
+    <Compile Include="LMUIPortal\LMDataObjects\LMLoginPageData.cs" />
+    <Compile Include="LMUIPortal\LMDataTypes\LMConfiguration.cs" />
+    <Compile Include="LMUIPortal\LMPageObjects\LMLoginPage.cs" />
+    <Compile Include="LMUIPortal\LMTests\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\Client\ExtendedLMApiClient.cs" />
-    <Compile Include="LMAPI\ConsumerTrackingAPI\APITests\TestScripts.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Db.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -241,7 +240,8 @@
     <Content Include="ExternalReferences\xunit.execution.desktop.dll" />
     <Content Include="ExternalReferences\xunit.runner.reporters.net452.dll" />
     <Content Include="ExternalReferences\xunit.runner.utility.net35.dll" />
-    <Content Include="LMDMSPortal\readme.txt" />
+    <Content Include="LMAPI\readme.txt" />
+    <Content Include="LMUIPortal\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -259,12 +259,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LMDMSPortal\LMResources\LMConfig.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>LMConfig.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="LMResources\LMConfig.resx" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="LMAPI\UserManagementAPI\" />
     <Folder Include="TestApi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

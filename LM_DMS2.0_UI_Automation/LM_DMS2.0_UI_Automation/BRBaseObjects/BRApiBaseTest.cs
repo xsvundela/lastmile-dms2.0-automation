@@ -11,7 +11,7 @@ namespace LastMile.Web.Automation.BRBaseObjects
         private bool IsInConclusive = false;
         private static bool BrowserStarted = false;
         private static bool m_Blogin = false;
-
+        public static bool messageStatus = false;
         //public static MPBaseWorkspace workspace = null;
         #endregion
 
@@ -81,6 +81,12 @@ namespace LastMile.Web.Automation.BRBaseObjects
             TestCaseEnd(stacktrace);
 
         }
+
+
+
+
+
+
         /// <summary>
         /// Used to check the API server up or not
         /// </summary>
@@ -98,12 +104,15 @@ namespace LastMile.Web.Automation.BRBaseObjects
                     return HttpStatusCode.OK;
                 }
             }
-            catch(Exception)
-            {                
+            catch (Exception)
+            {
                 return HttpStatusCode.NotFound;
             }
-        }  
+        }
         #endregion
+
+
+
     }
 
 }

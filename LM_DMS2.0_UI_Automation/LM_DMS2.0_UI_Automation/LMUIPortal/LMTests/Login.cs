@@ -28,7 +28,6 @@ namespace LastMile.Web.Automation.LMDMSPortal.LMTests
             LMLoginPageData m_BasePageData = new LMLoginPageData("Jturner_key");
             LMLoginPage LMbase = new LMLoginPage();
             LMbase.LoginAs(m_BasePageData.retrieveTestData("UserName"), m_BasePageData.retrieveTestData("Password"));
-
             BRBaseObjects.XPOBrowser.Close();
             
         }

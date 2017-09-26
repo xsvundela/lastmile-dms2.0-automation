@@ -1,6 +1,6 @@
 ﻿
 //using FreightOptimizer.FOResources;
-using LM_DMS2._0_UI_Automation.LMDMSPortal.LMResources;
+using LM_DMS2._0_UI_Automation.LMResources;
 using System.Resources;
 using System.Xml;
 
@@ -49,6 +49,11 @@ namespace LastMile.Web.Automation.BRDataTypes
         private static string m_XpoAdminServerUrl;
         #endregion ApiAutomation
 
+        #region CTApiAutomation
+        private static string c_baseApiUrl;
+        private static string c_baseWithPackageApiUrl;
+        #endregion CTApiAutomation
+
         #endregion
 
         #region Properties
@@ -61,6 +66,20 @@ namespace LastMile.Web.Automation.BRDataTypes
         {
             get { return base.GetXmlNode("Configuration"); }
         }
+
+
+        public string BaseServerUrl
+        {
+            get { return c_baseApiUrl; }
+            set { c_baseApiUrl = value; }
+        }
+        public string ServerWithPackageUrl
+        {
+            get { return c_baseWithPackageApiUrl; }
+            set { c_baseWithPackageApiUrl = value; }
+        }
+
+
 
         public string Browser
         {
@@ -279,6 +298,7 @@ namespace LastMile.Web.Automation.BRDataTypes
         /// <summary>
         public BRConfiguration() : base("C:\\BUILD_AUTOMATION\\Config.xml")
         {
+            
             Browser = GetConfigValue("BROWSER");
             DrivePath = GetConfigValue("DRIVE_PATH");
             DefaultTimeout = GetConfigIntValue("DEFAULT_TIMEOUT");
@@ -294,7 +314,7 @@ namespace LastMile.Web.Automation.BRDataTypes
             ApplicationName = GetConfigValue("APPLICATION");
             DeviceName = GetConfigValue("DEVICE");
 
-
+            
             DefaultUser = GetResourceValue("DEFAULT_USER_" + Locale);
             DefaultPassword = GetResourceValue("DEFAULT_PASS_" + Locale);
             DefaultNiceName = GetResourceValue("DEFAULT_NICE_USERNAME_" + Locale);
@@ -317,6 +337,25 @@ namespace LastMile.Web.Automation.BRDataTypes
                PMUserAccessClientUrl= GetResourceValue("PMSERVER_URL");
                XpoAdminServerUrl = GetResourceValue("XPOADMINSERVER_URL");
                #endregion ApiAutomation */
+
+
+            //Env = GetConfigValue("ENV");
+
+            if(ApplicationName.Equals("LMAPI"))
+            {
+                if (Env.Equals("INT"))
+                {
+                    BaseServerUrl = GetResourceValue("INT_SERVER_URL_BASE");
+                    ServerWithPackageUrl = GetResourceValue("SERVER_URL_WITH_PACKAGE");
+                }
+                else if (Env.Equals("STA"))
+                {
+                    BaseServerUrl = GetResourceValue("STA_SERVER_URL_BASE");
+                    ServerWithPackageUrl = GetResourceValue("SERVER_URL_WITH_PACKAGE");
+                }
+            }
+           
+
         }
         #endregion
 
@@ -327,10 +366,10 @@ namespace LastMile.Web.Automation.BRDataTypes
             switch (ApplicationName)
             {
                 case "DMSPortal":
-                    rm = new ResourceManager("LM_DMS2._0_UI_Automation.LMDMSPortal.LMResources.LMConfig", typeof(LMConfig).Assembly);
+                    rm = new ResourceManager("LM_DMS2._0_UI_Automation.LMResources.LMConfig", typeof(LMConfig).Assembly);
                     break;
                 default:
-                    rm = new ResourceManager("LM_DMS2._0_UI_Automation.LMDMSPortal.LMResources.LMConfig", typeof(LMConfig).Assembly);
+                    rm = new ResourceManager("LM_DMS2._0_UI_Automation.LMResources.LMConfig", typeof(LMConfig).Assembly);
                     break;
             }
             return rm.GetString(resourceName);

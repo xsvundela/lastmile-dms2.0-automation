@@ -33,6 +33,31 @@ namespace LastMile.Web.Automation.BRDataTypes
             get { return m_config ?? (m_config = new BRConfiguration()); }
         }
 
+        #region CTAPI
+        public static string BaseApiServerUrl
+        {
+            get
+            {
+                return CONFIG.BaseServerUrl;
+            }
+        }
+
+        public static string ServerUrlWIthPackage
+        {
+            get
+            {
+                return CONFIG.ServerWithPackageUrl;
+            }
+        }
+
+
+        public static string ENV
+        {
+            get { return CONFIG.Env; }
+        }
+        #endregion CTAPI
+        /// <summary
+        /// </summary>
         public static string BROWSER
         {
             get
@@ -230,10 +255,7 @@ namespace LastMile.Web.Automation.BRDataTypes
             get { return CONFIG.Locale; }
         }
 
-        public static string ENV
-        {
-            get { return CONFIG.Env; }
-        }
+
         #region ApiAutomation
 
         public static string TruckerPath_Login

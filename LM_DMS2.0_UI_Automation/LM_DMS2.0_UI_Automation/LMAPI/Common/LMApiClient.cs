@@ -87,43 +87,7 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common
             BaseUri = baseUri;
         }
 
-        public static HttpStatusCode PingHost(string hostAddress)
-        {
-            try
-            {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(hostAddress);
-                request.Timeout = 30000;
-                request.AllowAutoRedirect = false; // find out if this host is up and don't follow a redirector  
-                using (var response = request.GetResponse())
-                {
-                    return HttpStatusCode.OK;
-                }
-            }
-            catch (Exception)
-            {
-                return HttpStatusCode.NotFound;
-            }
-        }
-        public static void PingServerUrl(string hostAddress)
-        {
-            try
-            {
-                HttpStatusCode pingStatus = PingHost(hostAddress);
-                if (pingStatus != HttpStatusCode.OK)
-                {
-                    if (status == false)
-                    {
-                       // LogWarning("The Server is down:-" + hostAddress);
-                        status = true;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                LogHandler.LogException(ex);
-                throw;
-            }
-        }
+   
 
     }
 }
