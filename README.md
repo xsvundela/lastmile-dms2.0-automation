@@ -4,7 +4,7 @@
     
 ### last updated
   By : Soumya Indira , Infosys Limited.
-  Date : 22/09/2017
+  Date : 27/09/2017
   
 ### Pre requisites 
 
@@ -27,6 +27,14 @@ https://github.com/xpologistics/lastmile-dms2.0-testdata.git
 3) Build/Rebuild the solution.
 4) Go to LMDMSPortal --> LMTests --> inside we have a class file with Login.cs .
 5) Open Login.cs file and right click on the [Fact] and select runtests.
+
+
+##09/26/2017
+
+1) DB factory classes committed under folder LMDBFactory.
+2) Framework restructured to incorporate,UI and API test scripts under one solution.
+3) API test scripts for ConsumerTrackingAPI can be created under LMAPI -> ConsumerTrackingAPI->APITests.
+4) Please refer Readme.text under folder LMAPI, to start scripting of API tests. 
 
 
 
