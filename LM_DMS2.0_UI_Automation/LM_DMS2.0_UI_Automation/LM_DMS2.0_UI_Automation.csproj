@@ -168,7 +168,7 @@
     <Compile Include="LMAPI\Common\LMApiClient.cs" />
     <Compile Include="LMAPI\Common\LogHandler.cs" />
     <Compile Include="LMAPI\Common\ServerStatus.cs" />
-    <Compile Include="LMAPI\ConsumerTrackingAPI\APITests\GetOrderTrackingWithOrderId.cs" />
+    <Compile Include="LMAPI\ConsumerTrackingAPI\APITests\OrderTracking.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\CIOrderEvents.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\CIOrderSegment.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\ConsigneeInfo.cs" />
@@ -196,8 +196,9 @@
     <Compile Include="LMAPI\ConsumerTrackingAPI\Client\ExtendedLMApiClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Db.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config">
       <SubType>Designer</SubType>

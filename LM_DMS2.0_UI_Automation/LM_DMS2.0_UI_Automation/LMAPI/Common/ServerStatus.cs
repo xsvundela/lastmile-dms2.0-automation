@@ -11,7 +11,10 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.Common
 {
    public class ServerStatus: BRAPIBaseTest
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hostAddress"></param>
         public static void PingServerUrl(string hostAddress)
         {
             try

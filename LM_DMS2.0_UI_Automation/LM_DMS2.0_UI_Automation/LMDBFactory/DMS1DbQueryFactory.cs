@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common;
 
 namespace LM_DMS2._0_UI_Automation.LMDBFactory
 {
     public class DMS1DbQueryFactory : DBFactory
     {
-        DBFactory sqlConnection = new DBFactory();
+
+        public DMS1DbQueryFactory()
+        {
+            DBFactory sqlConnection = new DBFactory();
+        }
+       
 
         /*............. Shipper Details................*/
 
@@ -18,6 +20,7 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
 
         public class shiperAddress
         {
+            
             public string Name { set; get; }
             public string City { set; get; }
             public string State { set; get; }
@@ -71,7 +74,7 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
         //CallcenterEmailAddress() will return the call center email and telephone
         public static List<callCenterEmail> CallcenterEmailAddress()
         {
-            
+
             List<callCenterEmail> _callCenterEmail = new List<callCenterEmail>();
             try
             {
@@ -131,7 +134,45 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
 
         #endregion callcenterEmailPhone
 
+        #region Non_Ci Package Id and Customer Ref Id
 
+        public class Items
+        {
+            public string Description { get; set; }
+            public int Quantity { get; set; }
+            public string PackageID { get; set; }
+            public string CustomerReferenceNumber { get; set; }
+        }
+
+        public static List<Items> CustomerRefNumberAndPackageId()
+        {
+
+            List<Items> _customerRefandPackage = new List<Items>();
+            try
+            {
+                con.Open();
+                Items obj = new Items();
+                var query = @" ";
+                var queryCmd = new SqlCommand(query, con);
+                var queryReader = queryCmd.ExecuteReader();
+                while (queryReader.Read())
+                {
+                    obj.PackageID = queryReader[0].ToString();
+                    obj.CustomerReferenceNumber = queryReader[1].ToString();
+                    _customerRefandPackage.Add(obj);
+                }
+                queryReader.Close();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                LogHandler.LogException(ex);
+                throw ex;
+            }
+            return _customerRefandPackage;
+        }
+        #endregion Non_Ci Package Id and Customer Ref Id
 
     }
 }

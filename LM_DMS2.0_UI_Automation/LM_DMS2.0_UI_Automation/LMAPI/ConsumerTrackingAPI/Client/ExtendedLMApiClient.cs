@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿#region References
+using System;
 using System.Threading.Tasks;
 using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.ViewModel;
 using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common;
 using LM_DMS2._0_UI_Automation.LMAPI.Common;
 using LastMile.Web.Automation.BRDataTypes;
+#endregion References
 
 namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Client
 {
@@ -24,10 +23,12 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Client
             var task = GetDataAsync(orderId, detailsStatus);
             return task.Result;
         }
-        /// <summary>
-        /// GetFilterValues
-        /// </summary>
-        /// <returns></returns>
+       /// <summary>
+       /// Read the response from CT Api
+       /// </summary>
+       /// <param name="orderId"></param>
+       /// <param name="detailsStatus"></param>
+       /// <returns></returns>
         public async Task<TrackingInformationAPIResponse> GetDataAsync(int orderId, bool detailsStatus)
         {
             var result = await GetAsync<TrackingInformationAPIResponse>(new Uri(BaseUri, $"Order?orderId={orderId}&detail={detailsStatus}")).ConfigureAwait(false);

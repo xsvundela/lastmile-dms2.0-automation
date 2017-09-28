@@ -1,12 +1,10 @@
-﻿using System;
+﻿#region References
+using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xpo.Common.Configuration;
 using Xpo.Common.XpoApiClient;
-using System.Net;
+#endregion References
 
 namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common
 {
@@ -86,8 +84,5 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common
         {
             BaseUri = baseUri;
         }
-
-   
-
     }
 }

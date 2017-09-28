@@ -25,12 +25,12 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.ViewModel
         public string ETAStatus { get; set; }
         public string CurrentStatus { get; set; }
         public OrderDeliveryInfo Destination { get; set; }
-        public IList<Products> Items { get; set; }
+        public IList<Products>Items { get; set; }
         public IList<Events> Events { get; set; }
 
 
         //MinimalTrackingInformationCIOrder
-        public IList<Segment> Segments { get; set; }
+        public Segment Segments { get; set; }
 
         //TrackingInformationCIOrder
         public ShipperInfo Shipper { get; set; }
