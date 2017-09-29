@@ -144,6 +144,7 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.APITests
         /// 
 
         ////.....TC17942:Verify Package ID and Customer Reference of items for a non detailed non CI shipment tracking request....////
+        [Fact]
         public void TC_17942_ValidatePackageIdAndCustomerRefNonCIWithStatusFalse()
         {
             try
@@ -151,16 +152,22 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.APITests
                 LogInfo("TC_17942_ValidatePackageIdAndCustomerRefNonCIWithStatusFalse Test Started");
                 TestCaseBegin();
                 TrackingInformationAPIResponse trackingInformation = GetOrderTrackingAPI(65098608, false);
-                List<Items> _items = DMS1DbQueryFactory.CustomerRefNumberAndPackageId();
-                Assert.NotNull(_items);
-                // trackingInformation.Items.Select(x => x.PackageID);
-                _items.ForEach(_item =>
+                if (!trackingInformation.Items.Any())
                 {
-                    Assert.True(trackingInformation.Items.Any(x => x.PackageID == _item.PackageID));
-                    Assert.True(trackingInformation.Items.Any(x => x.CustomerReferenceNumber == _item.CustomerReferenceNumber));
+                    LogWarning("No data found in Items");
+                }
+                else
+                {
+                    List<Items> _items = DMS1DbQueryFactory.CustomerRefNumberAndPackageId(trackingInformation.OrderId.ToString());
+                    Assert.NotNull(_items);
+                    // trackingInformation.Items.Select(x => x.PackageID);
+                    _items.ForEach(_item =>
+                    {
+                        Assert.True(trackingInformation.Items.Any(x => x.PackageID == _item.PackageID));
+                        Assert.True(trackingInformation.Items.Any(x => x.CustomerReferenceNumber == _item.CustomerReferenceNumber));
 
-                });
-
+                    });
+                }
             }
 
             catch (Exception ex)
@@ -170,6 +177,7 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.APITests
             LogInfo("TC_17942_ValidatePackageIdAndCustomerRefNonCIWithStatusFalse Passed");
         }
         ////......TC_17913:Verify Package ID and Customer Reference of items for a non CI shipment tracking request...////
+        [Fact]
         public void TC_17913_ValidatePackageIdAndCustomerRefNonCIWithStatusTrue()
         {
             try
@@ -177,14 +185,22 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.APITests
                 LogInfo("TC_17913_ValidatePackageIdAndCustomerRefNonCIWithStatusTrue Test Started");
                 TestCaseBegin();
                 TrackingInformationAPIResponse trackingInformation = GetOrderTrackingAPI(65098608, true);
-                List<Items> _items = DMS1DbQueryFactory.CustomerRefNumberAndPackageId();
-                Assert.NotNull(_items);
-                _items.ForEach(_item =>
+                if (!trackingInformation.Items.Any())
                 {
+                    LogWarning("No data found in Items");
+                }
+                else
+                {
+                    List<Items> _items = DMS1DbQueryFactory.CustomerRefNumberAndPackageId(trackingInformation.OrderId.ToString());
+                    Assert.NotNull(_items);
+                    // trackingInformation.Items.Select(x => x.PackageID);
+                    _items.ForEach(_item =>
+                    {
+                        Assert.True(trackingInformation.Items.Any(x => x.PackageID == _item.PackageID));
+                        Assert.True(trackingInformation.Items.Any(x => x.CustomerReferenceNumber == _item.CustomerReferenceNumber));
 
-                    Assert.True(trackingInformation.Items.Any(x => x.PackageID == _item.PackageID));
-                    Assert.True(trackingInformation.Items.Any(x => x.CustomerReferenceNumber == _item.CustomerReferenceNumber));
-                });
+                    });
+                }
 
             }
 
@@ -195,20 +211,6 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.APITests
             LogInfo("TC_17913_ValidatePackageIdAndCustomerRefNonCIWithStatusTrue Passed");
         }
 
-        ////.....Verify SKU, Package ID and Customer Reference for a CI shipment tracking request...//
-        public void TC_17912_VerifySkuPackageIdCustRefNumber()
-        {
-
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
 
 
         #endregion UserStory:XLMDEV3562

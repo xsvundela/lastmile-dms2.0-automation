@@ -6,7 +6,7 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
 {
     public class DBFactory
     {
-        public static SqlConnection con = null;
+        public static SqlConnection con;
 
         public DBFactory()
         {

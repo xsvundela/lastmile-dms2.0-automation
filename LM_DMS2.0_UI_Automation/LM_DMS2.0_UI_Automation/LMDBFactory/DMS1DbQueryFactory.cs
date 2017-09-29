@@ -8,11 +8,10 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
     public class DMS1DbQueryFactory : DBFactory
     {
 
-        public DMS1DbQueryFactory()
-        {
-            DBFactory sqlConnection = new DBFactory();
-        }
-       
+
+        DBFactory sqlConnection = new DBFactory();
+
+
 
         /*............. Shipper Details................*/
 
@@ -20,7 +19,7 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
 
         public class shiperAddress
         {
-            
+
             public string Name { set; get; }
             public string City { set; get; }
             public string State { set; get; }
@@ -144,7 +143,7 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
             public string CustomerReferenceNumber { get; set; }
         }
 
-        public static List<Items> CustomerRefNumberAndPackageId()
+        public static List<Items> CustomerRefNumberAndPackageId(string OrderId)
         {
 
             List<Items> _customerRefandPackage = new List<Items>();
@@ -152,13 +151,14 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
             {
                 con.Open();
                 Items obj = new Items();
-                var query = @" ";
+                var query = @"SELECT ld_pkey As skuID,ld_commodity As Id_PackageId from fcload Where ld_fh_id =@OrderId";
                 var queryCmd = new SqlCommand(query, con);
+                queryCmd.Parameters.Add(new SqlParameter("OrderId", OrderId));
                 var queryReader = queryCmd.ExecuteReader();
                 while (queryReader.Read())
                 {
-                    obj.PackageID = queryReader[0].ToString();
-                    obj.CustomerReferenceNumber = queryReader[1].ToString();
+                    obj.PackageID = queryReader[1].ToString();
+                    obj.CustomerReferenceNumber = queryReader[0].ToString();
                     _customerRefandPackage.Add(obj);
                 }
                 queryReader.Close();
