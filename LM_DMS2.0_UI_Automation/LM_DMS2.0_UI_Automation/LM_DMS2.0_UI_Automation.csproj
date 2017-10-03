@@ -188,9 +188,12 @@
     <Compile Include="LMUIPortal\LMBaseObjects\LMBasePage.cs" />
     <Compile Include="LMUIPortal\LMBaseObjects\LMBaseUITest.cs" />
     <Compile Include="LMUIPortal\LMDataObjects\LMLoginPageData.cs" />
+    <Compile Include="LMUIPortal\LMDataObjects\UserManagementPageData.cs" />
     <Compile Include="LMUIPortal\LMDataTypes\LMConfiguration.cs" />
     <Compile Include="LMUIPortal\LMPageObjects\LMLoginPage.cs" />
+    <Compile Include="LMUIPortal\LMPageObjects\UserManagementPage.cs" />
     <Compile Include="LMUIPortal\LMTests\Login.cs" />
+    <Compile Include="LMUIPortal\LMTests\UserManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\Client\ExtendedLMApiClient.cs" />
