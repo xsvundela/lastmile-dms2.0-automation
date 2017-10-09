@@ -30,7 +30,7 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.ViewModel
 
 
         //MinimalTrackingInformationCIOrder
-        public Segment Segments { get; set; }
+        public IList<Segment> Segments { get; set; }
 
         //TrackingInformationCIOrder
         public ShipperInfo Shipper { get; set; }

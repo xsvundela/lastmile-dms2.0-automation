@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using LastMile.Web.Automation.BRBaseObjects;
 using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common;
+using System.Net.Http;
 
 namespace LM_DMS2._0_UI_Automation.LMAPI.Common
 {
-   public class ServerStatus: BRAPIBaseTest
+    public class ServerStatus: BRAPIBaseTest
     {
         /// <summary>
         /// 
@@ -35,5 +32,8 @@ namespace LM_DMS2._0_UI_Automation.LMAPI.Common
                 throw;
             }
         }
+
+
+       
     }
 }
