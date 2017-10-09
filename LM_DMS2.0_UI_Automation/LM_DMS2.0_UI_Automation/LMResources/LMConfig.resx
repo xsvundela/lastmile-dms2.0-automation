@@ -123,6 +123,9 @@
   <data name="INT_SERVER_URL_BASE" xml:space="preserve">
     <value>https://int-xlmapi.xpo.com/</value>
   </data>
+  <data name="SERVER_ADDRESS_DMS2" xml:space="preserve">
+    <value>http://10.155.97.143/DMS2/</value>
+  </data>
   <data name="SERVER_ADDRESS_INT" xml:space="preserve">
     <value>https://int-desktop.xpolastmile.com/portal</value>
   </data>

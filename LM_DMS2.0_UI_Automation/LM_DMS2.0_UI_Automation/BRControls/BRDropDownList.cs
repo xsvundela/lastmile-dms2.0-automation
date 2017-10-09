@@ -1,10 +1,15 @@
 ﻿
 using LastMile.Web.Automation.BRBaseObjects;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace LastMile.Web.Automation.BRControls
 {
     public class BRDropDownList : BRBaseWidget
     {
+        private SelectElement m_select;
+
         private BRBaseWidget DropDownList
         {
             get
@@ -27,7 +32,8 @@ namespace LastMile.Web.Automation.BRControls
         {
             get
             {
-                string sel = Locator + " > a > span.select2-arrow";
+                string sel = "div[class='xpo-select-trigger']>span:nth-child(2)";
+                //string sel = Locator + " > a > span.select2-arrow";
                 return new BRBaseWidget(sel, LocatorTypes.CSS , "downarrow", "Down Arrow"); 
             }
         }
@@ -50,22 +56,23 @@ namespace LastMile.Web.Automation.BRControls
         }
 
         public bool SelectItem(string item)
-        {
-            bool WasSelected = false;
+         {
+             bool WasSelected = false;
 
-            Open.Click();  //open the dropdown
-
-            BRBaseWidget m_dropDownList = DropDownList;
-            m_dropDownList.WaitTilIsVisible();
-
-            string sel = "//li/div[contains(@class, 'select2-result-label')][contains(text(),'" + item + "')]";
+             Open.Click();  //open the dropdown
+             item = item.Trim();
+            //BRBaseWidget m_dropDownList = DropDownList;
+           // m_dropDownList.WaitTilIsVisible();
+            IWebElement e;
+            string sel = "//div/div/xpo-option[contains(.,'"+item+"')]";
             BRBaseWidget m_theItem = new BRBaseObjects.BRBaseWidget(sel, LocatorTypes.XPATH, "dropdownItem", item);
-            m_theItem.WaitTilIsVisible();
-            m_theItem.Click();
-            WasSelected = true;
+             m_theItem.WaitTilIsVisible();
+             m_theItem.Click();
+             WasSelected = true;
 
-            return WasSelected;
-        }
+             return WasSelected;
+         }
+      
 
         public bool SearchFor(string item)
         {
