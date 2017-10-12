@@ -70,12 +70,15 @@
     </Reference>
     <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
       <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
@@ -114,6 +117,12 @@
     <Reference Include="Xpo.Common.XpoApiClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\brokerage-web-automation\Brokerage-Web-Automation\ExternalReferences\Xpo.Common.XpoApiClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpo.LastMile.CustomFieldManagement.Backend.Api.Site">
+      <HintPath>..\..\..\CustomFieldManagement\Api\Xpo.LastMile.CustomFieldManagement.Backend.Api.Site\bin\Xpo.LastMile.CustomFieldManagement.Backend.Api.Site.dll</HintPath>
+    </Reference>
+    <Reference Include="Xpo.LastMile.CustomFieldManagement.Shared.Models">
+      <HintPath>..\..\..\CustomFieldManagement\Api\Xpo.LastMile.CustomFieldManagement.Backend.Api.Site\bin\Xpo.LastMile.CustomFieldManagement.Shared.Models.dll</HintPath>
     </Reference>
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -193,6 +202,8 @@
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\Services.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\ShipperInfo.cs" />
     <Compile Include="LMAPI\ConsumerTrackingAPI\ViewModel\TrackingInformation.cs" />
+    <Compile Include="LMAPI\CustomFieldManagement\APITests\CustomFieldManagement.cs" />
+    <Compile Include="LMAPI\CustomFieldManagement\Client\XPOCustomeFieldManagementApiClient.cs" />
     <Compile Include="LMDBFactory\DBFactory.cs" />
     <Compile Include="LMDBFactory\DMS1DbQueryFactory.cs" />
     <Compile Include="LMDBFactory\DMS2DbQueryFactory.cs" />

@@ -120,6 +120,12 @@
   <data name="Application" xml:space="preserve">
     <value>DMSPortal</value>
   </data>
+  <data name="CFM_API_LocalHost" xml:space="preserve">
+    <value>http://localhost:60451/</value>
+  </data>
+  <data name="CFM_API_Package" xml:space="preserve">
+    <value>v1/customfields</value>
+  </data>
   <data name="INT_SERVER_URL_BASE" xml:space="preserve">
     <value>https://int-xlmapi.xpo.com/</value>
   </data>

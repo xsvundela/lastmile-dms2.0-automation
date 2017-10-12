@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common;
+using LM_DMS2._0_UI_Automation.LMAPI.Common;
+using Xpo.LastMile.CustomFieldManagement.Backend.Api.Site.Models;
 using System.Data;
 
 namespace LM_DMS2._0_UI_Automation.LMDBFactory
@@ -84,7 +85,7 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
             {
                 callCenterEmail obj = new callCenterEmail();
                 var query = @"select * from CustomerCareContactInfo";
-                DataTable fillDt = sqlConnection.ExecuteQuerywithNoparam(query);
+                DataTable fillDt = ExecuteQuerywithNoparam(query);
                 foreach (DataRow dr in fillDt.Rows)
                 {
                     obj.CallCenterEmail = dr[0].ToString();
@@ -567,6 +568,12 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
         }
 
         #endregion ConsigneeEmailPhone
+
+
+
+
+
+
 
     }
 

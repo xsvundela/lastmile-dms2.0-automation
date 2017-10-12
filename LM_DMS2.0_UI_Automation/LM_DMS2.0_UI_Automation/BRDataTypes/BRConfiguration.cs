@@ -345,6 +345,7 @@ namespace LastMile.Web.Automation.BRDataTypes
             {
                 if (Env.Equals("INT"))
                 {
+
                     BaseServerUrl = GetResourceValue("INT_SERVER_URL_BASE");
                     ServerWithPackageUrl = GetResourceValue("SERVER_URL_WITH_PACKAGE");
                 }
@@ -352,6 +353,12 @@ namespace LastMile.Web.Automation.BRDataTypes
                 {
                     BaseServerUrl = GetResourceValue("STA_SERVER_URL_BASE");
                     ServerWithPackageUrl = GetResourceValue("SERVER_URL_WITH_PACKAGE");
+                }
+                else if(Env.Equals("LocalHost"))
+                {
+                    BaseServerUrl = GetResourceValue("CFM_API_LocalHost");
+                    ServerWithPackageUrl = GetResourceValue("CFM_API_Package");
+
                 }
             }
            

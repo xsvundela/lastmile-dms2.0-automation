@@ -7,7 +7,7 @@ using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Client;
 using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.ViewModel;
 using LM_DMS2._0_UI_Automation.LMDBFactory;
 using LastMile.Web.Automation.BRBaseObjects;
-using LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common;
+using LM_DMS2._0_UI_Automation.LMAPI.Common;
 using static LM_DMS2._0_UI_Automation.LMDBFactory.DMS1DbQueryFactory;
 using LastMile.Web.Automation.BRDataTypes;
 using System.Linq;

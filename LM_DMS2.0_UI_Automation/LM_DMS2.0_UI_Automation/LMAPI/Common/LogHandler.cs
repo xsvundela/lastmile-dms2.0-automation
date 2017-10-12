@@ -7,7 +7,7 @@ using System.Reflection;
 using Xunit;
 #endregion
 
-namespace LM_DMS2._0_UI_Automation.LMAPI.ConsumerTrackingAPI.Common
+namespace LM_DMS2._0_UI_Automation.LMAPI.Common
 {
     /// <summary>
     /// This class is used for handling the LogHandler with log levels Exception,Information,Warning,Debug:-

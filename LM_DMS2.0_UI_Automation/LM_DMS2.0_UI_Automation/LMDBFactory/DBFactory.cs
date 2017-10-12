@@ -17,15 +17,19 @@ namespace LM_DMS2._0_UI_Automation.LMDBFactory
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["IntDBConnection"].ConnectionString.ToString());
 
             }
-            else
+            else if(BRGlobalVars.ENV.Equals("STA"))
             {
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["StaDBConnection"].ConnectionString.ToString());
 
             }
+            else if (BRGlobalVars.ENV.Equals("LocalHost"))
+            {
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["CustomFieldManagement"].ConnectionString.ToString());
+            }
         }
 
 
-        public DataTable ExecuteQuerywithNoparam(string Query)
+        public static  DataTable ExecuteQuerywithNoparam(string Query)
         {
             DataTable dt = new DataTable();
             try
